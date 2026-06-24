@@ -19,116 +19,166 @@ st.set_page_config(
 
 custom_css = """
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-    
-    * {
-        font-family: 'Poppins', sans-serif;
-    }
-    
-    .main-header {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        margin-bottom: 2rem;
-        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-    }
-    
-    .main-header h1 {
-        color: white;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 0;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    .main-header p {
-        color: rgba(255,255,255,0.9);
-        font-size: 1.1rem;
-        margin-top: 0.5rem;
-    }
-    
-    .stButton>button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 0.75rem 2rem;
-        font-weight: 600;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    .stButton>button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    }
-    
-    .login-box {
-        background: white;
-        padding: 3rem;
-        border-radius: 20px;
-        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-        max-width: 500px;
-        margin: 2rem auto;
-    }
-    
-    .success-box {
-        background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
-        margin: 1rem 0;
-    }
-    
-    .error-box {
-        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
-        margin: 1rem 0;
-    }
-    
-    .footer {
-        text-align: center;
-        padding: 2rem;
-        color: #667eea;
-        font-weight: 600;
-        margin-top: 3rem;
-    }
-    
-    .stTextInput>div>div>input, .stTextArea>div>div>textarea, .stNumberInput>div>div>input {
-        border-radius: 10px;
-        border: 2px solid #e0e0e0;
-        padding: 0.75rem;
-        transition: all 0.3s ease;
-    }
-    
-    .stTextInput>div>div>input:focus, .stTextArea>div>div>textarea:focus {
-        border-color: #667eea;
-        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
-    }
-    
-    .info-card {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        padding: 1.5rem;
-        border-radius: 15px;
-        margin: 1rem 0;
-    }
-    
-    .log-container {
-        background: #1e1e1e;
-        color: #00ff00;
-        padding: 1rem;
-        border-radius: 10px;
-        font-family: 'Courier New', monospace;
-        max-height: 400px;
-        overflow-y: auto;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.stApp {
+    background:
+    radial-gradient(circle at top, #3a0000 0%, #050000 45%, #000000 100%);
+    color: #fff;
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(135deg, #ff0000 0%, #7a0000 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 30px #ff0000;
+    border: 1px solid #ff3333;
+}
+
+.main-header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 0 0 15px red;
+}
+
+.main-header p {
+    color: #ffdede;
+}
+
+
+/* Profile DP */
+.profile-box {
+    text-align:center;
+    background: rgba(255,0,0,0.08);
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 0 25px red;
+    margin:20px auto;
+}
+
+.profile-box img {
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    border:4px solid red;
+    box-shadow:0 0 30px red;
+}
+
+
+/* Buttons */
+.stButton>button {
+
+    background: linear-gradient(135deg,#ff0000,#990000);
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:0.8rem 2rem;
+    font-weight:700;
+    box-shadow:0 0 20px red;
+    transition:.3s;
+}
+
+
+.stButton>button:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 40px red;
+}
+
+
+/* Input */
+.stTextInput input,
+.stTextArea textarea,
+.stNumberInput input {
+
+    background:#100000;
+    color:white;
+    border:2px solid red;
+    border-radius:12px;
+}
+
+
+.stTextInput input:focus,
+.stTextArea textarea:focus {
+
+    box-shadow:0 0 15px red;
+}
+
+
+/* Cards */
+.info-card {
+
+    background:rgba(255,0,0,0.10);
+    border:1px solid red;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,0,0,.5);
+}
+
+
+/* Success */
+.success-box {
+
+background:linear-gradient(135deg,#00ff66,#006600);
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 20px #00ff66;
+}
+
+
+/* Error */
+.error-box {
+
+background:linear-gradient(135deg,#ff0033,#660000);
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 20px red;
+}
+
+
+/* Logs */
+.log-container {
+
+background:#000;
+color:#ff0033;
+padding:20px;
+border-radius:15px;
+font-family:'Courier New';
+border:1px solid red;
+box-shadow:0 0 20px red;
+}
+
+
+/* Footer */
+.footer {
+
+color:red;
+text-align:center;
+text-shadow:0 0 10px red;
+}
+
 </style>
+
+
+<!-- Profile DP Add -->
+<div class="profile-box">
+
+<img src="https://i.ibb.co/N25mw0bM/Picsart-26-06-12-10-45-51-459.jpg">
+
+<h2 style="color:red;">𝑹𝑨𝑯𝑼𝑳  𝑷𝑨𝑵𝑪𝑯𝑨𝑳  𝑼𝑷 11</h2>
+
+<p style="color:white;">
+𝑬2𝑬𝑬  𝑰𝑵𝑩𝑶𝑿  𝑳𝑶𝑫𝑬𝑹  2026
+</p>
+
+</div>
 """
 
 st.markdown(custom_css, unsafe_allow_html=True)
@@ -1221,7 +1271,7 @@ else:
                                    help="Facebook conversation ID from the URL")
             
             name_prefix = st.text_input("Hatersname", value=user_config['name_prefix'],
-                                       placeholder="e.g., [END TO END HASSAN RAJPUT HERE]",
+                                       placeholder="e.g., [END TO END RAHUL PANCHAL HERE]",
                                        help="Prefix to add before each message")
             
             delay = st.number_input("Delay (seconds)", min_value=1, max_value=300, 
